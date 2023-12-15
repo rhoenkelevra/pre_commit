@@ -2,6 +2,7 @@ flowchart TB
     c1-->a2
     subgraph one
     a1-->a2
+    a2-->a3
     end
     subgraph two
     b1-->b2
@@ -12,4 +13,4 @@ flowchart TB
     one --> two
     three --> two
     two --> c2
-    three --> c2
+    three --> c1
