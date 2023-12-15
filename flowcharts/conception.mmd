@@ -1,22 +1,30 @@
 flowchart TB
-    c1-->a2    
-    subgraph one
-    a1-->a2
-    a2-->a3
-    a3-->a4
-    a4-->a5
-    a5-->a6
-    a6-->a7 
-    end
+    start(["スタート"])
+    UserInteraction[/"ユーザーとの対話開始"/]
+    StartMainProcess["メイン処理スタート"]
+    LoadAppConfig["AppConfigを読み取る"]
+    CheckInputs/OutputsFromConfig["AppConfigからインプット・アウトプット確認"]
+    LoadInputFiles["インプットデータを読み取る"]
+    LoadMasterFile["モデルマスタを読み取る"]
+    GetTranslations["日英翻訳を取得"]
+    Check/ChangeStrings["文字列操作"]
+    CompareWithPrevious["AS400累計と比べ"]
+    OutputFiles["ファイル出力"]
+    OutputFinalMessage["処理完了メッセージを表示"]
+    End(["終了"])
 
-    subgraph two
-    b1-->b2
-    end
+    start
+    --> UserInteraction
+    --> StartMainProcess
+    --> LoadAppConfig
+    --> CheckInputs/OutputsFromConfig
+    --> LoadInputFiles
+    --> LoadMasterFile
+    --> GetTranslations
+    --> Check/ChangeStrings
+    --> CompareWithPrevious
+    --> OutputFiles
+    --> OutputFinalMessage
+    --> End
 
-    subgraph three
-    c1-->c2
-    end
 
-    one --> two
-    three --> two
-    two --> c2
