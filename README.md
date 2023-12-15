@@ -8,10 +8,10 @@ npm install -g @mermaid-js/mermaid-cli
 
 - convert file to image
 ``` bash
-mmdc -i input.mmd -o output.svg
+mmdc -i input.mmd -o output.png
 ```
 
-![My Image](images/image.png)
+![My Image](flowcharts/conception.png)
  
 
 added string 
