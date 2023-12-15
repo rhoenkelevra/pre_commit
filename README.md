@@ -13,3 +13,5 @@ mmdc -i input.mmd -o output.svg
 
 ![My Image](images/image.png)
  
+
+added string 
